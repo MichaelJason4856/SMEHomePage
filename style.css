@@ -1,0 +1,39 @@
+body {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+
+  
+  .btn:hover {
+    background-color: greenyellow;
+    transform: scale(1.2);
+    opacity: 0.75;
+    color: black;
+  }
+
+  #box {
+    width: 400px;
+    height: 300px;
+    color: red;
+    position: center;
+    margin: auto;
+    border-style: solid;
+    margin-top: 10px;
+  }
+
+  #login {
+    position: absolute;
+    right: 10px;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
