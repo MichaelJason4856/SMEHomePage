@@ -1,39 +1,116 @@
 body {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
+.btn:hover {
+  background-color: greenyellow;
+  transform: scale(1.2);
+  opacity: 0.75;
+  color: black;
+}
 
+#box {
+  width: 400px;
+  height: 300px;
+  color: red;
+  position: center;
+  margin: auto;
+  border-style: solid;
+  margin-top: 10px;
+}
+
+#login {
+  position: absolute;
+  right: 10px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+#page {
+  display: grid;
+  width: 100%;
+  height: 200px;
+  grid-template:
+    [header-left] "head head" 30px [header-right]
+    [main-left] "nav  main" 1fr [main-right]
+    [footer-left] "nav  foot" 30px [footer-right]
+    / 120px 1fr;
+}
+
+header {
+  background-color: lime;
+  grid-area: head;
+}
+
+nav {
+  background-color: lightblue;
+  grid-area: nav;
+}
+
+main {
+  background-color: yellow;
+  grid-area: main;
+}
+
+footer {
+  background-color: red;
+  grid-area: foot;
+}
+
+.homepage-header {
+  height: 283px;
+  background-color: rgb(41, 41, 41);
+  margin: 10px;
+}
+
+.header-image-box {
+  background-color: rgb(156, 53, 53);
+  margin-bottom: 200px;
+  left: 60%;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+.nav-link {
+  font-style: white;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid black;
+}
+
+.homenav {
+  margin-left: 20px;
+}
+
+.homepage-content {
+  float: left;
+  position: relative;
+  margin-left: 200px;
+  margin-top: 50px;
+  color: white;
+  overflow: hidden;
+
+}
+
+span {
+  font-size: 20px;
+}
+
+hr {
+  position: inline;
+  float: right;
   
-  .btn:hover {
-    background-color: greenyellow;
-    transform: scale(1.2);
-    opacity: 0.75;
-    color: black;
-  }
-
-  #box {
-    width: 400px;
-    height: 300px;
-    color: red;
-    position: center;
-    margin: auto;
-    border-style: solid;
-    margin-top: 10px;
-  }
-
-  #login {
-    position: absolute;
-    right: 10px;
-  }
-
-  .container {
-    margin-top: 20px;
-  }
-
-  img {
-    width: 200px;
-    height: 200px;
-  }
+}
