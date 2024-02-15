@@ -73,3 +73,9 @@ body {
     color: white;
     font-weight: bolder;
 }
+
+.nav_center_top {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
