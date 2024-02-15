@@ -6,43 +6,70 @@
     <!-- Bootstrap links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Question of the day</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">SME Team</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="apps.html">Apps</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <div id="box">
-        <h1>Who's going to do the next question of the day?</h1>
-        <button type="button" class="btn btn-primary shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="buttonClicked" onclick="whosDoingNextQuestion()">Click me</button>
-    </div>     
-        <p aria-hidden="true" >
-        <span class="placeholder col-4"></span>
-        </p>      
-        <a class="btn btn-primary disabled placeholder col-4" id="answer" aria-disabled="true"></a>      
-    <div>
-        <p id="response"></p>
+  <!-- Navigation Bar Section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SME Team</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item homenav">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apps.html">Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>  
+          <li class="nav-item">
+            <a class="btn btn-primary" id="login" href="login.html" role="button">Login</a>
+          </li>  
+        </ul>
+      </div>
     </div>
-    <script src="script.js"></script>
+  </nav>
+     
+  <!-- Spin Wheel Section -->
+  <div class = "container">
+    <div class = "spinBtb">Spin</div>
+      <div class = "wheel">
+        <div class = "Name" style="--1:1;--clr:blue"><span>Michael</span></div>
+        <div class = "Name" style="--1:2;--clr:red"><span>Mark</span></div>
+        <div class = "Name" style="--1:3;--clr:green"><span>George</span></div>
+        <div class = "Name" style="--1:8;--clr:pink"><span>Shivani</span></div>
+        <div class = "Name" style="--1:5;--clr:purple"><span>Ben</span></div>
+        <div class = "Name" style="--1:6;--clr:orange"><span>Chuck</span></div>
+        <div class = "Name" style="--1:4;--clr:gray"><span>Try Again</span></div>
+        <div class = "Name" style="--1:7;--clr:brown"><span>Try Again</span></div>
+      </div>      
+  </div>
+
+  <!-- Answer Section -->
+  <div>
+    <p id="answer"></p>
+  </div>
+
+    <script>
+      let wheel = document.querySelector('.wheel');
+      let spinBtn = document.querySelector('.spinBtb');
+      let value = Math.ceil(Math.random() * 3600);
+      let answer1 = document.getElementById("answer");
+
+      spinBtn.onclick = function(){
+          wheel.style.transform = "rotate(" + value + "deg)";
+          value += Math.ceil(Math.random()* 3600);
+          //answer1.textContent = --1 + " is going to the next question of the day."
+      }     
+      
+      
+    </script>
+    
 </body>
 </html>
